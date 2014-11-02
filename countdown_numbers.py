@@ -78,6 +78,14 @@ class CountdownAStar(AStar):
 
 
 class CountdownNode(AStarNode):
+	"""Contains the state of a Countdown numbers game. 
+	
+	expression is the expression that was used to arrive at this state.
+		eg. 7 + 25 = 32
+	
+	numbers *is* the current state. It contains the numbers available to choose from 
+	when selecting a new operation. numbers is a sorted tuple.
+	"""
 	
 	def __init__(self, expression, numbers):
 		super(CountdownNode, self).__init__()
